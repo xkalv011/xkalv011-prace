@@ -1,0 +1,71 @@
+      [
+      
+        {
+        "Kódování": "UTF-8",
+		"Verze aplikace": "1.0",
+		"Název aplikace": "Knižní mánie",
+		"Autor aplikace": "appGroupe",
+		"Kontakt": "manie@mail.cz"
+        }
+      
+        {                                                    
+         "ID:" "1",               
+		 "Typ literatury:" "kniha",
+		 "Název knihy": "Romeo a Julie",
+		 
+			"Rok vydání:" "1995-03-15",
+			"Stav zboží:" "Na skladě",
+        },
+        {                                                    
+         "ID:" "2",               
+		 "Typ literatury:" "povídka",
+		 "Název knihy": "Válka s mloky",
+		 
+			"Rok vydání:" "1999-10-24",
+			"Stav zboží:" "Na prodejně",
+        },
+        {                                                    
+         "ID:" "3",               
+		 "Typ literatury:" "kniha",
+		 "Název knihy": "Na západní frontě klid",
+		 
+			"Rok vydání:" "1967-11-14",
+			"Stav zboží:" "Na prodejně",
+        },
+        {                                                    
+         "ID:" "4",               
+		 "Typ literatury:" "kniha",
+		 "Název knihy": "Pes baskervillský",
+		 
+			"Rok vydání:" "2014-11-20",
+			"Stav zboží:" "Na prodejně",
+        },
+        {                                                    
+         "ID:" "5",               
+		 "Typ literatury:" "časopis",
+		 "Název knihy": "Past na myši",
+		 
+			"Rok vydání:" "1961-02-19",
+			"Stav zboží:" "Na skladě",
+        }     
+        {                                                               
+			"ID:" "5",               
+			"Název knihy": "Past na myši",
+        },     
+        {                                                               
+			"ID:" "3",               
+			"Název knihy": "Na západní frontě klid",
+        },     
+        {                                                               
+			"ID:" "1",               
+			"Název knihy": "Romeo a Julie",
+        },     
+        {                                                               
+			"ID:" "2",               
+			"Název knihy": "Válka s mloky",
+        },     
+        {                                                               
+			"ID:" "4",               
+			"Název knihy": "Pes baskervillský",
+        }
+      ]

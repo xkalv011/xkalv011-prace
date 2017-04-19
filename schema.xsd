@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified">
+	<xs:element name="knihovna">
+		<xs:complexType>
+		<xs:sequence>
+			<xs:element name="konfigurace" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name="lang" type="xs:string" default="cs"/>
+					<xs:element name="coding" type="xs:string"  fixed="UTF-8"/>
+					<xs:element name="aplication_version" type="xs:string"/>
+					<xs:element name="background_color" type="xs:string" default="#FFF"/>
+					<xs:element name="font_color" type="xs:string" default="#000"/>
+					<xs:element name="site_name" type="xs:string"/>
+					<xs:element name="aplication_name" type="xs:string"/>
+					<xs:element name="meta" type="xs:boolean"/>
+					<xs:element name="description" type="xs:boolean"/>
+					<xs:element name="pouzivani_cookie" type="xs:boolean"/>
+					<xs:element name="show_reklamy" type="xs:boolean"/>
+					<xs:element name="app_image" type="xs:string"/>
+					<xs:element name="stylesheet">
+						<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="type" type="xs:string"/>
+							</xs:extension>
+						</xs:simpleContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="screen_resolution" minOccurs="1" maxOccurs="1">
+						<xs:complexType>
+						<xs:sequence>
+							<xs:element name="responsive" type="xs:boolean"/>
+							<xs:element name="vyska" type="xs:integer"/>
+							<xs:element name="sirka" type="xs:integer"/>						
+						</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="autor_aplikace" type="xs:string"/>
+					<xs:element name="kontakt_mail" type="xs:string"/>
+					<xs:element name="zdroj_aplikace" type="xs:string"/>
+					<xs:element name="socialni_site" type="xs:string"/>
+					<xs:element name="server_hosting" type="xs:string"/>
+				</xs:sequence>
+				</xs:complexType>
+			</xs:element><!--Konec konfigurace-->
+			
+			<xs:element name="kniha" maxOccurs="unbounded">
+				<xs:complexType>
+				<xs:sequence>
+					<xs:element name="nazev_knihy">
+						<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="lang" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:simpleContent>							
+						</xs:complexType>
+					</xs:element>					
+					<xs:element name="autor" minOccurs="1">
+						<xs:complexType>
+						<xs:sequence>
+							<xs:element name="jmeno" type="xs:string"/>
+							<xs:element name="prijmeni" type="xs:string"/>
+						</xs:sequence>
+							<xs:attribute name="pohlavi" type="xs:string"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="klicova_slova" type="xs:string"/>
+					<xs:element name="vydavatelstvi" type="xs:string"/>
+					<xs:element name="zanr" type="xs:string"/>
+					<xs:element name="rok_vydani" type="xs:date"/>
+					<xs:element name="jazyk_knihy" type="xs:string"/>
+					<xs:element name="kod_knihy" type="xs:integer"/>
+					<xs:element name="nor_kod">
+						<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="ISBN" type="xs:boolean"/>
+							</xs:extension>
+						</xs:simpleContent>								
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="pocet_stran" type="xs:integer"/>
+					<xs:element name="stav_knihy" type="xs:string"/>					
+					<xs:element name="stav" type="xs:string"/>
+					<xs:element name="pocet_kusu" type="xs:integer"/>
+					<xs:element name="cena">
+						<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:integer">
+								<xs:attribute name="mena" type="xs:string"/>
+								<xs:attribute name="cena_s_DPH" type="xs:boolean"/>
+							</xs:extension>
+						</xs:simpleContent>							
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="popis_knihy" type="xs:string"/>
+					<xs:element name="rozsireni">
+						<xs:complexType>
+						<xs:sequence>
+							<xs:element name="hodnoceni" type="xs:integer"/>
+							<xs:element name="pocet_recenzi" type="xs:integer"/>
+							<xs:element name="komentare" type="xs:integer"/>
+							<xs:element name="zajimavosti" type="xs:string"/>
+						</xs:sequence>
+							<xs:attribute name="show" type="xs:boolean"/>
+						</xs:complexType>
+					</xs:element>					
+					<xs:element name="nahled_knihy" minOccurs="1">
+						<xs:complexType>
+						<xs:sequence>
+							<xs:element name="odkaz_na_soubor" type="xs:string"/>
+							<xs:element name="velikost" minOccurs="1" maxOccurs="1">
+							<xs:complexType>
+							<xs:sequence>
+								<xs:element name="vyskaNahled" type="xs:integer"/>
+								<xs:element name="sirkaNahled" type="xs:integer"/>
+							</xs:sequence>
+							</xs:complexType>
+							</xs:element>
+							<xs:element name="zvetseni" type="xs:boolean"/>
+							<xs:element name="popis" type="xs:string"/>
+						</xs:sequence>
+							<xs:attribute name="nahledID" type="xs:positiveInteger" use="required"/>
+							<xs:attribute name="format" type="xs:string"/>
+						</xs:complexType>
+					</xs:element>					
+					<xs:element name="informace_o_zaznamu" minOccurs="1">
+						<xs:complexType>
+						<xs:sequence>
+							<xs:element name="datum_pridani" type="xs:date"/>
+							<xs:element name="posledni_zmena" type="xs:date"/>
+							<xs:element name="autor_zaznamu" type="xs:string"/>
+						</xs:sequence>
+							<xs:attribute name="existence" type="xs:boolean"/>
+						</xs:complexType>
+					</xs:element>					
+				</xs:sequence>
+					<xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+					<xs:attribute name="zeme_puvodu" type="xs:string"/>
+					<xs:attribute name="druh" type="xs:string"/>
+				</xs:complexType>
+			</xs:element><!--konec elementu kniha-->
+		</xs:sequence>
+		</xs:complexType>
+	</xs:element><!--konec elementu knihovna-->
+	
+<!--omezeni-->
+	<xs:element name="lang">
+		<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="cs"/>
+			<xs:enumeration value="sk"/>
+			<xs:enumeration value="en"/>
+			<xs:enumeration value="de"/>
+		</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:simpleType name="sirka">
+      <xs:restriction base="xs:integer">
+         <xs:enumeration value="640" />
+         <xs:enumeration value="854" />
+         <xs:enumeration value="1280" />
+         <xs:enumeration value="1920" />
+         <xs:enumeration value="2560" />
+         <xs:enumeration value="3840" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="vyska">
+      <xs:restriction base="xs:integer">
+         <xs:enumeration value="360" />
+         <xs:enumeration value="480" />
+         <xs:enumeration value="720" />
+         <xs:enumeration value="1080" />
+         <xs:enumeration value="1440" />
+         <xs:enumeration value="2160" />
+      </xs:restriction>
+   </xs:simpleType>
+	<xs:element name="nazev_knihy">
+		<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="4"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="stav">
+		<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Na skladě"/>
+			<xs:enumeration value="Na prodejně"/>
+			<xs:enumeration value="Rezervováno"/>
+		</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="pocet_kusu">
+		<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9]"/>
+		</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:attribute name="format">
+		<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="img|png|pdf"/>
+		</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:simpleType name="sirkaNahled">
+      <xs:restriction base="xs:integer">
+         <xs:enumeration value="100" />
+         <xs:enumeration value="200" />
+         <xs:enumeration value="300" />
+         <xs:enumeration value="500" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="vyskaNahled">
+      <xs:restriction base="xs:integer">
+         <xs:enumeration value="80" />
+         <xs:enumeration value="180" />
+         <xs:enumeration value="280" />
+         <xs:enumeration value="480" />
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

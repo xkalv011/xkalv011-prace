@@ -1,0 +1,426 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+  <title>Semestrální práce na zančkovací jazyky</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="language" content="cs" />
+  <meta name="Author" content="Vít Kalaš">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  </head>
+  
+  <body>
+    <div class="container">
+	<header>
+		<h1><u>Knižní portál</u></h1>
+		<nav>
+			<h3>Menu:</h3>
+			<ul>
+				<li><a href="#uvod">Úvod</a></li>
+				<li><a href="#metodika">Metodika</a></li>
+				<li><a href="#popis">Popis elementů a atributů</a></li>
+				<li><a href="#transformace">Popis transformace</a></li>
+				<li><a href="#zaver">Závěr</a></li>
+			</ul>
+			<hr />
+		</nav>
+	</header>
+	
+	<main>
+		<section id="uvod">
+			<h2>Úvod</h2>			            
+			<p>
+			Tato práce byla vypracována na základě zadání semestrální práce z předmětu značkovací jazyky. Jako téma byl zvolen knižní portál. Toto téma jsem si vybral, protože jsem už dříve využil xml pro databázy knih v aplikaci psanou v jazyce C#.
+			</br>
+			Soubor XML lze využít jak pro konfiguraci aplikace, její nastavení, tak pro ukladání dat, přesněji knih a jejich záznamů.
+			</p>
+		</section>
+		<section id="metodika">
+			<h2>Metodika</h2>
+			<p>
+			Ke zpracování práce jsem využil studijní materiály obsažené na školním moodlu a webový portál <a href="https://www.w3schools.com/default.asp">w3schools.com</a>, který se zabývá webovýma technologiema a poskytuje učební a testovací materiál.</br>
+			K testování XML souboru s daty a jeho schématu <i>xsd</i> jsem použil online validator, který se nacházi na stránkách <a href="http://www.xmlvalidation.com/">zde</a>. Pro otestování XSL transofrormace XML dat do JSON jsem použil online transformer z těchto stránek <a href="http://www.freeformatter.com/xsl-transformer.html">zde</a>.</br>
+			Pro veškeré testování byl použit prohlížeč Google Chrome a pro psaní zdrojového kódu byl využit program Notepad++.
+			</p>
+		</section>
+		<section id="popis" >
+			<h2>Popis elementů a atributů</h2>
+			  <h3>Elementy</h3>
+			  <table border="1" id="elementy" title="Tabulka elementů">
+				<tr>
+				  <th>Název elementu</th>
+				  <th>Popis elementu</th>
+				  <th>Omezení</th>
+				</tr>
+				<tr>                       
+				  <td>konfigurace</td>
+				  <td>Obaluje konfiguraci aplikace</td>
+				  <td>Bez omezení</td>
+				</tr>
+ 				<tr>                       
+				  <td>lang</td>
+				  <td>Určuje použitý jazyk, defaultně nastavený na češtinu</td>
+				  <td>cs, sk, en, de</td>
+				</tr> 
+				<tr>                       
+				  <td>coding</td>
+				  <td>Určuje jaký typ formátování je použitý</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>aplication_version</td>
+				  <td>Určuje verzy aplikace</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>background_color</td>
+				  <td>Určuje použití barvy pozadí</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>font_color</td>
+				  <td>Určuje použití barvy písma</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>site_name</td>
+				  <td>Určuje jméno webu</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>aplication_name</td>
+				  <td>Určuje jméno aplikace</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>meta</td>
+				  <td>Určuje zda budou použity meta data</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>description</td>
+				  <td>Určuje zda je povoleno zobrazování popisků</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>pouzivani_cookie</td>
+				  <td>Určuje zda je povoleno sbírání cookie dat</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>show_reklamy</td>
+				  <td>Určuje zda je povoleno zobrazování reklam</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>app_image</td>
+				  <td>Určuje použití loga aplikace</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>stylesheet</td>
+				  <td>Určuje zdroj použitých aplikačních stylů </td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>screen_resolution</td>
+				  <td>Obaluje nastavení zobrazení</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>responsive</td>
+				  <td>Určuje zda je zobrazení responzivní</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>vyska</td>
+				  <td>Určuje výško zobrazení</td>
+				  <td>360, 480, 720, 1080, 1440, 2160</td>
+				</tr>
+				<tr>                       
+				  <td>sirka</td>
+				  <td>Určuje šířku zobrazení</td>
+				  <td>640, 854, 1280, 1920, 2560, 3840</td>
+				</tr>
+				<tr>                       
+				  <td>autor_aplikace</td>
+				  <td>Určuje kdo je autorem aplikace</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>kontakt_mail</td>
+				  <td>Určuje kontakt na výrobce aplikace</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>zdroj_aplikace</td>
+				  <td>Určuje umístění aplikace</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>socialni_site</td>
+				  <td>Obsahuje odkaz na sociální sítě</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>server_hosting</td>
+				  <td>Určuje kde je apliakce hostovaná</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>kniha</td>
+				  <td>Obaluje nastevní knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>nazev_knihy</td>
+				  <td>Určuje název knihy</td>
+				  <td>min. délka 4, max. délka 30</td>
+				</tr>
+				<tr>                       
+				  <td>autor</td>
+				  <td>Obaluje jméno autora knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>jmeno</td>
+				  <td>Určuje jméno autora</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>prijmeni</td>
+				  <td>Určuje příjmení autora</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>klicova_slova</td>
+				  <td>Určuje použitá klíčová slova pro vyhledávání</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>vydavatelstvi</td>
+				  <td>Určuje vydavatelství knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>zanr</td>
+				  <td>Určuje žánr knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>rok_vydani</td>
+				  <td>Určuje datum, kdy byla kniha vydána</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>jazyk_knihy</td>
+				  <td>Určuje v jakým jazyce je kniha napsána</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>kod_knihy</td>
+				  <td>Určuje kód knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>nor_kod</td>
+				  <td>Určuje normovaný kód knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>pocet_stran</td>
+				  <td>Určuje počet stránek obsažených v knize</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>stav_knihy</td>
+				  <td>Určuje v jaké fyzickém stavu je kniha</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>stav</td>
+				  <td>Určuje kde se kniha nachází</td>
+				  <td>Na skladě, Na prodejně, Rezervováno</td>
+				</tr>
+				<tr>                       
+				  <td>pocet_kusu</td>
+				  <td>Určuje počet knih na skladě</td>
+				  <td>0-9</td>
+				</tr>
+				<tr>                       
+				  <td>cena</td>
+				  <td>Určuje cenu knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>popis_knihy</td>
+				  <td>Obsahuje stručný popis knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>rozsireni</td>
+				  <td>Obaluje stav použitého rozšíření</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>hodnoceni</td>
+				  <td>Určuje kvalitu hodnocení</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>pocet_recenzi</td>
+				  <td>Určuje kolik recenzi se zobrazuje</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>komentare</td>
+				  <td>Určuje kolik komentářů se zobrazuje</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>zajimavosti</td>
+				  <td>Obsahuje zajímavosti o knize</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>nahled_knihy</td>
+				  <td>Obaluje nastavení náhledu knihy</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>odkaz_na_soubor</td>
+				  <td>Obsahuje zdroj souboru, použitého pro náhled</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>velikost</td>
+				  <td>Obaluje nastavení parametrů náhledu</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>vyskaNahled</td>
+				  <td>Určuje výšku náhledu</td>
+				  <td>80, 180, 280, 480</td>
+				</tr>
+				<tr>                       
+				  <td>sirkaNahled</td>
+				  <td>Určuje šířku náhledu</td>
+				  <td>100, 200, 300, 500</td>
+				</tr>
+				<tr>                       
+				  <td>zvetseni</td>
+				  <td>Určuje zda je povolena možnost zvětšení</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>popis</td>
+				  <td>Obsahuje popis náhledu</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>informace_o_zaznamu</td>
+				  <td>Obaluje zobrazení informací o záznamu</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>datum_pridani</td>
+				  <td>Obsahuje datum přídání záznamu</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>posledni_zmena</td>
+				  <td>Obsahuje datum poslední změny záznamu</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>autor_zaznamu</td>
+				  <td>Obsahuje jméno autora, který přidal záznam</td>
+				  <td>Bez omezení</td>
+				</tr>				
+			  </table>
+			  <h3>Atributy</h3>
+			  <table border="1" title="Tabulka atributů">
+				<tr>
+				  <th>Název atributu</th>
+				  <th>Popis atributu</th>
+				  <th>Omezení</th>
+				</tr>
+				<tr>                       
+				  <td>type</td>
+				  <td>Určuje jaká technologie je použita pro nastavení stylů</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>id</td>
+				  <td>Určuje jednoznačnou identifikaci knihy znázorněnou číslem</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>zeme_puvodu</td>
+				  <td>Určuje odkud kniha pochází</td>
+				  <td>Bez omezení</td>
+				</tr>
+				<tr>                       
+				  <td>druh</td>
+				  <td>Určuje o jaký typ výtisku se jedná</td>
+				  <td>Bez omezení</td>
+				</tr>  	
+				<tr>                       
+				  <td>pohlavi</td>
+				  <td>Určuje pohlaví autora</td>
+				  <td>Bez omezení</td>
+				</tr> 
+				<tr>                       
+				  <td>ISBN</td>
+				  <td>Určuje zda se jedná o ISBN kod</td>
+				  <td>Bez omezení</td>
+				</tr> 
+				<tr>                       
+				  <td>mena</td>
+				  <td>Určuje jaký druh měny je použit</td>
+				  <td>Bez omezení</td>
+				</tr>  
+				<tr>                       
+				  <td>cena_s_DPH</td>
+				  <td>Určuje zda je cena vyjádřena s DPH</td>
+				  <td>Bez omezení</td>
+				</tr> 
+				<tr>                       
+				  <td>show</td>
+				  <td>Určuje zda je zobrazeno rozšíření</td>
+				  <td>Bez omezení</td>
+				</tr>  
+				<tr>                       
+				  <td>nahledID</td>
+				  <td>Určuje jednoznačnou identifikaci použitého náhledu znázorněnou číslem </td>
+				  <td>Bez omezení</td>
+				</tr> 
+				<tr>                       
+				  <td>format</td>
+				  <td>Určuje typ použitého formátu</td>
+				  <td>img, png, pdf</td>
+				</tr> 	
+				<tr>                       
+				  <td>existence</td>
+				  <td>Určuje zda se má zobrazit informace o záznamu</td>
+				  <td>Bez omezení</td>
+				</tr> 
+			  </table>
+		</section>
+		<section id="transformace">
+			<h2>Popis transformace</h2>
+			<p>
+			Data z XML jsou transformována do JSON. Byl převážně využit cyklus <i>for-each</i>, který umožňuje efektivně projet každý uzel a najít všechny výsledky. Celkem transoformace obsahuje 4 příklady výpisu. První příklad umožňuje vypsat základní nastavení aplikace. Druhý příklad vypisuje základní informace všech knih. Pro třetí příklad je využita funkce srotování, kdy se vypíší pouze názvy knih seřažených dle ceny. V posledním příkladu je využita funkce výběru dle podmínky, vypíší se pouze takové záznamy, kde kniha je napsána v anglickém jazyce. Pro otestování byl použit v metodice zmíněný online transformátor.
+			</p>
+		</section>
+		<section id="zaver">
+			<h2>Závěr</h2>
+			<p>V této práci jsem nalezl pratktické znalosti z oblasti XML, naučil jsem se tuto technologii efektivně využívat v praxi. Poprvé jsem si vyzkoušel vytvářet schéma na XML a vytváření transformace do json. Vědomosti s transofrmací mohu později využít i při práci s webovými stránkami, kdy mohu data převádět do html kódu. Vytvořená práce je pouze prototyp a proto je nutné pro použití v praxi udělat ještě několik pokusů a rozšíření, hlavně v oblasti konfigurace aplikace.
+			</p>
+	</main>
+	<footer align="center">
+		<hr \>
+		Autor: <i>Vít Kalaš</i> | ČZU Praha 2017
+	</footer>
+    </div>
+  </body>
+</html>

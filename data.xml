@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<knihovna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<konfigurace>
+		<lang>cs</lang>
+		<coding>UTF-8</coding>
+		<aplication_version>1.0</aplication_version>
+		<background_color>#FFF</background_color>
+		<font_color>#000</font_color>
+		<site_name>Knižní mánie</site_name>
+		<aplication_name>Knižní mánie</aplication_name>
+		<meta>true</meta>
+		<description>true</description>
+		<pouzivani_cookie>false</pouzivani_cookie>
+		<show_reklamy>false</show_reklamy>
+		<app_image>http://knizni-manie.cz/web/photo/siteimage.png</app_image>
+		<stylesheet type="text/css">http://www.knizni-manie.cz/web/style/style.css</stylesheet>
+		<screen_resolution>
+			<responsive>true</responsive>
+			<vyska>1366</vyska>
+			<sirka>768</sirka>
+		</screen_resolution>
+		<autor_aplikace>appGroupe</autor_aplikace>
+		<kontakt_mail>manie@mail.cz</kontakt_mail>
+		<zdroj_aplikace>https://www.knizni-manie.cz</zdroj_aplikace>
+		<socialni_site>twitter.com/knizni-manie</socialni_site>
+		<server_hosting>wedos.cz</server_hosting>
+	</konfigurace>
+		
+	<kniha id="1" zeme_puvodu="Anglie" druh="kniha">
+		<nazev_knihy lang="cs">Romeo a Julie</nazev_knihy>
+		<autor pohlavi="muž">
+			<jmeno>William</jmeno>
+			<prijmeni>Shakespeare</prijmeni>
+		</autor>
+		<klicova_slova>romeo a julie, kapuleti, montekove</klicova_slova>
+		<vydavatelstvi>Zlata konvice</vydavatelstvi>
+		<zanr>Drama</zanr>
+		<rok_vydani>1995-03-15</rok_vydani>
+		<jazyk_knihy>CZ</jazyk_knihy>
+		<kod_knihy>05054664</kod_knihy>
+		<nor_kod ISBN="true">978-80-7432-790-2</nor_kod>
+		<pocet_stran>256</pocet_stran>
+		<stav_knihy>Nové</stav_knihy>
+		<stav>Na skladě</stav>
+		<pocet_kusu>3</pocet_kusu>
+		<cena mena="Kč" cena_s_DPH="true">258</cena>
+		<popis_knihy>Jaký by byl Romeo, kdyby se narodil v dnešní přetechnizované době? A co na to panensky čistá láska Julie ve světě neřestí a násilí? Mohl by jejich vztah vůbec přečkat věky, jak o tom vypráví William Shakespeare?</popis_knihy>
+		<rozsireni show="true">
+			<hodnoceni>5</hodnoceni>
+			<pocet_recenzi>2</pocet_recenzi>
+			<komentare>0</komentare>
+			<zajimavosti>Romeo a Julie v moderni době</zajimavosti>
+		</rozsireni>		
+		<nahled_knihy nahledID="001" format="img">
+			<odkaz_na_soubor>http://www.google.com/nahled/001</odkaz_na_soubor>
+			<velikost>
+				<vyskaNahled>100</vyskaNahled>
+				<sirkaNahled>100</sirkaNahled>
+			</velikost>
+			<zvetseni>true</zvetseni>
+			<popis>Obrázek 1</popis>
+		</nahled_knihy>		
+		<informace_o_zaznamu existence="true">
+			<datum_pridani>2015-05-23</datum_pridani>
+			<posledni_zmena>2016-06-12</posledni_zmena>
+			<autor_zaznamu>Franta</autor_zaznamu>			
+		</informace_o_zaznamu>
+	</kniha>
+	
+	<kniha id="2" zeme_puvodu="Česká Republika" druh="povídka">
+		<nazev_knihy lang="cs">Válka s mloky</nazev_knihy>
+		<autor pohlavi="muž">
+			<jmeno>Karel</jmeno>
+			<prijmeni>Čapek</prijmeni>
+		</autor>
+		<klicova_slova>Čapek, povídka, válka s mloky</klicova_slova>
+		<vydavatelstvi>Společenství neohrožených</vydavatelstvi>
+		<zanr>Román</zanr>
+		<rok_vydani>1999-10-24</rok_vydani>
+		<jazyk_knihy>CZ</jazyk_knihy>
+		<kod_knihy>79565689</kod_knihy>
+		<nor_kod ISBN="true">978-80-7390-018-2</nor_kod>
+		<pocet_stran>366</pocet_stran>
+		<stav_knihy>Otevřené</stav_knihy>
+		<stav>Na prodejně</stav>
+		<pocet_kusu>1</pocet_kusu>
+		<cena mena="Kč" cena_s_DPH="false">200</cena>
+		<popis_knihy>Slavná antiutopická sci-fi z roku 1936 pojednává o rase inteligentních mloků, kteří se napřed nechají využívat jako levná pracovní síla, ale po čase se jejich populace přemnoží a začne lidstvo ohrožovat. </popis_knihy>
+		<rozsireni show="true">
+			<hodnoceni>5</hodnoceni>
+			<pocet_recenzi>15</pocet_recenzi>
+			<komentare>3</komentare>
+			<zajimavosti>Nejslavnější román</zajimavosti>
+		</rozsireni>		
+		<nahled_knihy nahledID="002" format="pdf">
+			<odkaz_na_soubor>http://www.google.com/nahled/002.pdf</odkaz_na_soubor>
+			<velikost>
+				<vyskaNahled>180</vyskaNahled>
+				<sirkaNahled>200</sirkaNahled>
+			</velikost>
+			<zvetseni>true</zvetseni>
+			<popis>Obrázek 2 mlok</popis>
+		</nahled_knihy>		
+		<informace_o_zaznamu existence="true">
+			<datum_pridani>2016-08-12</datum_pridani>
+			<posledni_zmena>2016-12-12</posledni_zmena>
+			<autor_zaznamu>Petr Klapil</autor_zaznamu>			
+		</informace_o_zaznamu>
+	</kniha>
+	
+	<kniha id="3" zeme_puvodu="Francie" druh="kniha">
+		<nazev_knihy lang="cs">Na západní frontě klid</nazev_knihy>
+		<autor pohlavi="muž">
+			<jmeno>Erich</jmeno>
+			<prijmeni>Remarque</prijmeni>
+		</autor>
+		<klicova_slova>válka, západní fronta, </klicova_slova>
+		<vydavatelstvi>Mala punčocha</vydavatelstvi>
+		<zanr>Světová literatura</zanr>
+		<rok_vydani>1967-11-14</rok_vydani>
+		<jazyk_knihy>CZ</jazyk_knihy>
+		<kod_knihy>654896512</kod_knihy>
+		<nor_kod ISBN="true">28-015-67</nor_kod>
+		<pocet_stran>356</pocet_stran>
+		<stav_knihy>Nové</stav_knihy>
+		<stav>Na prodejně</stav>
+		<pocet_kusu>2</pocet_kusu>
+		<cena mena="Kč" cena_s_DPH="true">320</cena>
+		<popis_knihy>Popisuje krutou realitu války a hluboké odtržení od civilního života německých vojáků vracejících se z fronty. Román podrobně výstižně představuje válečnou realitu takřka s novinářskou precizitou.  </popis_knihy>
+		<rozsireni show="true">
+			<hodnoceni>4</hodnoceni>
+			<pocet_recenzi>16</pocet_recenzi>
+			<komentare>8</komentare>
+			<zajimavosti>Stejnojmenný film byl natáčen koncem 70. let i v tehdejším Československu </zajimavosti>
+		</rozsireni>		
+		<nahled_knihy nahledID="003" format="png">
+			<odkaz_na_soubor>http://www.google.com/nahled/003.png</odkaz_na_soubor>
+			<velikost>
+				<vyskaNahled>180</vyskaNahled>
+				<sirkaNahled>200</sirkaNahled>
+			</velikost>
+			<zvetseni>true</zvetseni>
+			<popis>Obrázek 3 most</popis>
+		</nahled_knihy>		
+		<informace_o_zaznamu existence="true">
+			<datum_pridani>2014-08-22</datum_pridani>
+			<posledni_zmena>2017-03-17</posledni_zmena>
+			<autor_zaznamu>Kaňka</autor_zaznamu>			
+		</informace_o_zaznamu>
+	</kniha>
+	
+	<kniha id="4" zeme_puvodu="Anglie" druh="kniha">
+		<nazev_knihy lang="cs">Pes baskervillský</nazev_knihy>
+		<autor pohlavi="muž">
+			<jmeno>Arthur Conan</jmeno>
+			<prijmeni>Doyle</prijmeni>
+		</autor>
+		<klicova_slova>Sherlock Holmes, pes baskervillský </klicova_slova>
+		<vydavatelstvi>Velká kniha</vydavatelstvi>
+		<zanr>Světová literatura, detektivní román</zanr>
+		<rok_vydani>2014-11-20</rok_vydani>
+		<jazyk_knihy>CZ</jazyk_knihy>
+		<kod_knihy>365789456</kod_knihy>
+		<nor_kod ISBN="true">978-80-7390-142-4</nor_kod>
+		<pocet_stran>226</pocet_stran>
+		<stav_knihy>Použité</stav_knihy>
+		<stav>Na prodejně</stav>
+		<pocet_kusu>1</pocet_kusu>
+		<cena mena="Kč" cena_s_DPH="true">120</cena>
+		<popis_knihy>Sir Karel, pán na Baskervillském zámku, zemřel za záhadných okolností. Stála za jeho smrtí stará kletba, která podle legendy jeho rod pronásleduje již od anglické Velké revoluce? Nezdá se to rodinnému  </popis_knihy>
+		<rozsireni show="true">
+			<hodnoceni>4</hodnoceni>
+			<pocet_recenzi>0</pocet_recenzi>
+			<komentare>1</komentare>
+			<zajimavosti>Stejnojmenný film byl natočen na několik způsobů </zajimavosti>
+		</rozsireni>		
+		<nahled_knihy nahledID="004" format="png">
+			<odkaz_na_soubor>http://www.google.com/nahled/004.png</odkaz_na_soubor>
+			<velikost>
+				<vyskaNahled>280</vyskaNahled>
+				<sirkaNahled>300</sirkaNahled>
+			</velikost>
+			<zvetseni>false</zvetseni>
+			<popis>Obrázek 4 Wotsen</popis>
+		</nahled_knihy>		
+		<informace_o_zaznamu existence="true">
+			<datum_pridani>2015-06-15</datum_pridani>
+			<posledni_zmena>2017-03-25</posledni_zmena>
+			<autor_zaznamu>Leprch</autor_zaznamu>			
+		</informace_o_zaznamu>
+	</kniha>
+	
+	<kniha id="5" zeme_puvodu="Anglie" druh="časopis">
+		<nazev_knihy lang="cs">Past na myši</nazev_knihy>
+		<autor pohlavi="muž">
+			<jmeno>Agatha</jmeno>
+			<prijmeni>Christie</prijmeni>
+		</autor>
+		<klicova_slova>Myška nechce do pasti, hop nebo trop </klicova_slova>
+		<vydavatelstvi>Nástněnka</vydavatelstvi>
+		<zanr>Světová literatura, detektivka</zanr>
+		<rok_vydani>1961-02-19</rok_vydani>
+		<jazyk_knihy>EN</jazyk_knihy>
+		<kod_knihy>46789123</kod_knihy>
+		<nor_kod ISBN="true">80-9874-632-45</nor_kod>
+		<pocet_stran>128</pocet_stran>
+		<stav_knihy>Nové</stav_knihy>
+		<stav>Na skladě</stav>
+		<pocet_kusu>10</pocet_kusu>
+		<cena mena="eu" cena_s_DPH="false">50</cena>
+		<popis_knihy>Děj hry se odehrává v uzavřeném prostoru Penziónu U klášterní studny, v němž se za sněhové bouře schází velmi nesourodá skupina osob, z nichž každá má své tajemství i společné vazby.</popis_knihy>
+		<rozsireni show="true">
+			<hodnoceni>2</hodnoceni>
+			<pocet_recenzi>3</pocet_recenzi>
+			<komentare>1</komentare>
+			<zajimavosti>Žádné zajímavosti </zajimavosti>
+		</rozsireni>		
+		<nahled_knihy nahledID="005" format="jpg">
+			<odkaz_na_soubor>http://www.google.com/nahled/005.jpg</odkaz_na_soubor>
+			<velikost>
+				<vyskaNahled>280</vyskaNahled>
+				<sirkaNahled>300</sirkaNahled>
+			</velikost>
+			<zvetseni>false</zvetseni>
+			<popis>Obrázek 5 myš</popis>
+		</nahled_knihy>		
+		<informace_o_zaznamu existence="true">
+			<datum_pridani>2065-01-14</datum_pridani>
+			<posledni_zmena>2017-02-04</posledni_zmena>
+			<autor_zaznamu>Tralala</autor_zaznamu>			
+		</informace_o_zaznamu>
+	</kniha>
+</knihovna>
